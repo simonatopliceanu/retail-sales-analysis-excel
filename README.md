@@ -10,7 +10,7 @@ The stakeholder requested an Excel summary with quarterly KPIs, two charts and a
 
 ## Summary
 
-![Excel summary showing quarterly purchasing trends](summary.pdf)
+![Excel summary showing quarterly purchasing trends](summary.png)
 
 ## Key findings
 
