@@ -24,7 +24,7 @@ Customers bought fewer items per order, but spent more per item. Looking only at
 
 ## Approach
 
-- Cleaned inconsistent date and price formats and trimmed spaces from order IDs.
+- Used Power Query to standardise date and price formats and trim spaces from order IDs.
 - Removed 137 duplicate order rows.
 - Excluded 22 orders from 2022 and their 38 associated item rows.
 - Linked order dates to item records using XLOOKUP.
@@ -54,12 +54,26 @@ Counting item rows is different from counting unique orders. I also learned to k
 
 The portfolio version was refined after the timed exercise to improve validation and presentation.
 
-## Workbook
+## Workbook and source files
 
-[Download the Excel workbook](retail-sales-analysis.xlsx)
+- [Excel workbook](retail-sales-analysis.xlsx)
+- [Orders source data](Orders.csv)
+- [Items sold source data](Items_sold.csv)
 
-The workbook includes the summary, cleaned data, PivotTable and cleaning log.
+The workbook includes the summary, Power Query cleaning steps,
+cleaned data, PivotTable and cleaning log. Saved results can be
+reviewed without refreshing.
 
-**Tools:** Excel, XLOOKUP, PivotTables, formulas and charts.
+### Refreshing the workbook
 
-**AI assistance:** Used for summary wording and layout of the final Excel summary.
+1. Download the workbook and both source CSV files.
+2. Open the workbook in Excel.
+3. In Power Query, update each query’s Source step to point to
+   the corresponding CSV on your computer.
+4. Refresh the queries, then refresh the PivotTable.
+
+The saved source paths originally pointed to files on my computer.
+If you see a `DataSource.NotFound` error, update these paths.
+The cleaning steps do not need to be recreated.
+
+**Tools:** Excel, Power Query, XLOOKUP, PivotTables, formulas and charts.
